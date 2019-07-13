@@ -17,7 +17,7 @@ public class AppleStocks {
             throw new IllegalArgumentException("Expecting an int array with at least two values.");
         }
 
-        int maxProfit = 0;
+        int maxProfit = stockPrices[1] - stockPrices[0];
         int minPrice = stockPrices[0];
 
 

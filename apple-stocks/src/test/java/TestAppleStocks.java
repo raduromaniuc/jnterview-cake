@@ -20,13 +20,22 @@ public class TestAppleStocks {
 
         System.out.println("Tested arrays:");
         stockPricesList.forEach(stockPrices -> {
-            System.out.println(Arrays.toString(stockPrices));
+            int actual = AppleStocks.getMaxProfit(stockPrices);
+            int expected = getExpectedMaxProfit(stockPrices);
 
-            Assert.assertEquals("Invalid max profit computation.",
-                    AppleStocks.getMaxProfit(stockPrices),
-                    getActualMaxProfit(stockPrices)
-            );
+            System.out.println(Arrays.toString(stockPrices) + " " + expected + " " + actual);
+            Assert.assertEquals("Invalid max profit computation.", expected, actual);
         });
+    }
+
+    @Test
+    public void testEdgeCaseAllNegative() {
+        int[] stockPrices = new int[] {-1, -7, -4, -2, -6, -9};
+
+        Assert.assertEquals("Invalid computation.",
+                    AppleStocks.getMaxProfit(stockPrices),
+                    getExpectedMaxProfit(stockPrices)
+                );
     }
 
     private List<int[]> getListOfStockPrices(int listSize, int noPrices) {
@@ -62,7 +71,7 @@ public class TestAppleStocks {
      * O(n^2) execution time
      * O(1) memory consumption
      * */
-    private int getActualMaxProfit(int[] stockPrices) {
+    private int getExpectedMaxProfit(int[] stockPrices) {
         int maxProfit = 0;
         for(int i = 0; i < stockPrices.length; i++) {
             for(int j = i + 1, currentProfit; j < stockPrices.length; j++) {
