@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/apple-stocks/apple-stocks.iml" filepath="$PROJECT_DIR$/apple-stocks/apple-stocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/highest-product-of-three/highest-product-of-three.iml" filepath="$PROJECT_DIR$/highest-product-of-three/highest-product-of-three.iml" />
       <module fileurl="file://$PROJECT_DIR$/merging-meeting-times/merging-meeting-times.iml" filepath="$PROJECT_DIR$/merging-meeting-times/merging-meeting-times.iml" />
       <module fileurl="file://$PROJECT_DIR$/product-of-all-other-numbers/product-of-all-other-numbers.iml" filepath="$PROJECT_DIR$/product-of-all-other-numbers/product-of-all-other-numbers.iml" />
       <module fileurl="file://$PROJECT_DIR$/reverse-words/reverse-words.iml" filepath="$PROJECT_DIR$/reverse-words/reverse-words.iml" />
